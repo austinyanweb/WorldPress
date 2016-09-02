@@ -5478,3 +5478,12 @@ function my_custom_login_logo() {
 }
 
 add_action('login_head', 'my_custom_login_logo');
+
+
+
+
+function remove_footer_admin () {
+  echo "Welcome to <a href="."http://localhost/wordpress/".">Myblog</a> Enjoy!!";
+} 
+
+add_filter('admin_footer_text', 'remove_footer_admin'); 

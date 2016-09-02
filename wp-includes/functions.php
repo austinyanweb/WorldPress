@@ -5463,3 +5463,18 @@ function wp_raise_memory_limit( $context = 'admin' ) {
 
 	return false;
 }
+
+/* 
+Change the login logo with yours
+add by ycl 11:15 2016/9/2
+
+ */
+ 
+ 
+function my_custom_login_logo() {
+    echo '<style type="text/css">
+        h1 a { background-image:url('.get_bloginfo('template_directory').'/images/ycl-log.jpg) !important; }
+    </style>';
+}
+
+add_action('login_head', 'my_custom_login_logo');
